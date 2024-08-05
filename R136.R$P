@@ -1,0 +1,16 @@
+/Tde/x/l/v/c/k /V3.10 /LC:\BC5\LIB +
+-v+ C:\BC5\LIB\C0C.OBJ+
+-v+ INTRO.OBJ+
+-v+ LOADSAVE.OBJ+
+-v+ STRINP.OBJ+
+-v+ INIT.OBJ+
+-v+ STATUS.OBJ+
+-v+ MAIN.OBJ+
+-v+ USE.OBJ
+R136.EXE
+
+-v+ C:\BC5\LIB\BIDSC.LIB+
+-v+ C:\BC5\LIB\EMU.LIB+
+-v+ C:\BC5\LIB\MATHC.LIB+
+-v+ C:\BC5\LIB\CC.LIB
+
