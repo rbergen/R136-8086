@@ -2,7 +2,7 @@
 
 As documented in the ["main" R136 repo](https://github.com/rbergen/R136), R136 is a text adventure game that was written for MS-DOS in the second half of the 1990s.
 
-When the friend I developed the game with found the source code on an old backup drive, I took a look at the original procedural C++ version of the game I basically gave up on that version of it. That's because it won't build or run on modern versions of Windows, I threw out my last MS-DOS compatible machine many years ago, and I don't like the idea of developing in and for VMs or emulators only.
+When the friend I developed the game with found the source code on an old backup drive a few years back, I took a look at the original procedural C++ version of the game and I basically immediately gave up on that version of it. That's because it won't build or run on modern versions of Windows, I threw out my last MS-DOS compatible machine many years ago, and I don't like the idea of developing in and for VMs or emulators only.
 
 Instead, I ported the old code to a "modern" C++ version that's in the aforementioned repo, and a .NET version that can be found [here](https://github.com/rbergen/R136.NET).
 (You're saying I went overboard with this? I agree! But I had a lot of fun, and nobody was injured.)
