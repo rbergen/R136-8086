@@ -11,38 +11,38 @@
 /* Turn warning for 'Unreachable code' off (Borland) */
 #pragma warn -rch
 
-
 #define BLOCK_ROW_COUNT 8
 
-#define S__ " "
-#define BBB "\xDB"
-#define TTT "\xDF"
-#define LLL "\xDC"
+#define _ " "
+#define B "\xDB"
+#define T "\xDF"
+#define L "\xDC"
 
 // I apologize for the way these block diagrams are composed. In my mind this
-// is still more readable than a long range of non-aligned \x escape codes.
+// is still more readable than a long range of non-aligned \x escape codes. Just
+// don't change the code in this file to use single capital letter variables!
 
 const char *spider[2][BLOCK_ROW_COUNT] =
 {
 	{
-		S__ S__ LLL LLL LLL S__ S__ S__ S__ S__ S__ S__ S__ LLL S__ BBB S__ LLL S__ S__ S__ S__ S__ S__ S__ S__ LLL LLL LLL S__ S__,
-		S__ LLL TTT S__ S__ TTT TTT LLL LLL S__ S__ LLL TTT S__ TTT BBB TTT S__ TTT LLL S__ S__ LLL LLL TTT TTT S__ S__ TTT LLL S__,
-		LLL BBB S__ LLL LLL LLL LLL S__ S__ BBB BBB BBB S__ TTT S__ LLL S__ TTT S__ BBB BBB BBB S__ S__ LLL LLL LLL LLL S__ BBB LLL,
-		S__ S__ S__ BBB S__ S__ S__ TTT TTT BBB BBB BBB BBB LLL BBB BBB BBB LLL BBB BBB BBB BBB TTT TTT S__ S__ S__ BBB S__ S__ S__,
-		S__ LLL BBB S__ S__ S__ S__ LLL LLL LLL TTT BBB BBB BBB BBB BBB BBB BBB BBB BBB TTT LLL LLL LLL S__ S__ S__ S__ BBB LLL S__,
-		S__ S__ S__ LLL TTT TTT TTT S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ TTT TTT TTT LLL S__ S__ S__,
-		S__ S__ BBB S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ BBB S__ S__,
-		S__ TTT TTT S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ TTT TTT S__
+		_ _ L L L _ _ _ _ _ _ _ _ L _ B _ L _ _ _ _ _ _ _ _ L L L _ _,
+		_ L T _ _ T T L L _ _ L T _ T B T _ T L _ _ L L T T _ _ T L _,
+		L B _ L L L L _ _ B B B _ T _ L _ T _ B B B _ _ L L L L _ B L,
+		_ _ _ B _ _ _ T T B B B B L B B B L B B B B T T _ _ _ B _ _ _,
+		_ L B _ _ _ _ L L L T B B B B B B B B B T L L L _ _ _ _ B L _,
+		_ _ _ L T T T _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ T T T L _ _ _,
+		_ _ B _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ B _ _,
+		_ T T _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ T T _
 	},
 	{
-		S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ BBB S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__,
-		S__ S__ BBB TTT TTT LLL LLL S__ S__ S__ S__ S__ LLL TTT LLL BBB LLL TTT LLL S__ S__ S__ S__ S__ LLL LLL TTT TTT BBB S__ S__,
-		S__ BBB S__ S__ S__ S__ S__ TTT TTT LLL LLL BBB S__ LLL S__ TTT S__ LLL S__ BBB LLL LLL TTT TTT S__ S__ S__ S__ S__ BBB S__,
-		TTT TTT S__ BBB TTT TTT TTT LLL LLL BBB BBB BBB LLL S__ LLL BBB LLL S__ LLL BBB BBB BBB LLL LLL TTT TTT TTT BBB S__ TTT TTT,
-		S__ S__ LLL TTT S__ S__ S__ S__ S__ TTT BBB BBB BBB BBB BBB BBB BBB BBB BBB BBB BBB TTT S__ S__ S__ S__ S__ TTT LLL S__ S__,
-		S__ TTT TTT S__ LLL LLL LLL TTT TTT TTT S__ BBB BBB BBB BBB BBB BBB BBB BBB BBB S__ TTT TTT TTT LLL LLL LLL S__ TTT TTT S__,
-		S__ S__ LLL TTT S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ TTT LLL S__ S__,
-		S__ LLL BBB S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ BBB LLL S__
+		_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ B _ _ _ _ _ _ _ _ _ _ _ _ _ _ _,
+		_ _ B T T L L _ _ _ _ _ L T L B L T L _ _ _ _ _ L L T T B _ _,
+		_ B _ _ _ _ _ T T L L B _ L _ T _ L _ B L L T T _ _ _ _ _ B _,
+		T T _ B T T T L L B B B L _ L B L _ L B B B L L T T T B _ T T,
+		_ _ L T _ _ _ _ _ T B B B B B B B B B B B T _ _ _ _ _ T L _ _,
+		_ T T _ L L L T T T _ B B B B B B B B B _ T T T L L L _ T T _,
+		_ _ L T _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ T L _ _,
+		_ L B _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ B L _
 	}
 };
 
@@ -50,40 +50,40 @@ const char *spider[2][BLOCK_ROW_COUNT] =
 #define SPIDER_DROP_HEIGHT 13
 const int spider_width = strlen(spider[0][0]);
 
-const char *line_section 		  = S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ BBB S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__;
-const char *clear_spider_spaces = S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__;
+const char *line_section 		  = _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ B _ _ _ _ _ _ _ _ _ _ _ _ _ _ _;
+const char *clear_spider_spaces = _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _;
 
 const char *letters[3][BLOCK_ROW_COUNT] =
 {
 	{
-		BBB TTT TTT TTT TTT TTT TTT TTT TTT TTT TTT LLL,
-		BBB S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ BBB,
-		BBB S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ BBB,
-		BBB LLL LLL LLL LLL LLL LLL LLL LLL LLL LLL TTT,
-		BBB S__ S__ S__ S__ S__ TTT LLL S__ S__ S__ S__,
-		BBB S__ S__ S__ S__ S__ S__ S__ TTT LLL S__ S__,
-		BBB S__ S__ S__ S__ S__ S__ S__ S__ S__ TTT LLL,
-		S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__
+		B T T T T T T T T T T L,
+		B _ _ _ _ _ _ _ _ _ _ B,
+		B _ _ _ _ _ _ _ _ _ _ B,
+		B L L L L L L L L L L T,
+		B _ _ _ _ _ T L _ _ _ _,
+		B _ _ _ _ _ _ _ T L _ _,
+		B _ _ _ _ _ _ _ _ _ T L,
+		_ _ _ _ _ _ _ _ _ _ _ _
 	},
 	{
-		BBB TTT TTT TTT TTT TTT TTT TTT TTT TTT TTT LLL,
-		BBB S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ BBB,
-		BBB S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ BBB,
-		BBB LLL LLL LLL LLL LLL LLL LLL LLL LLL LLL TTT,
-		BBB S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__,
-		BBB S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__,
-		BBB S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__,
-		S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__
+		B T T T T T T T T T T L,
+		B _ _ _ _ _ _ _ _ _ _ B,
+		B _ _ _ _ _ _ _ _ _ _ B,
+		B L L L L L L L L L L T,
+		B _ _ _ _ _ _ _ _ _ _ _,
+		B _ _ _ _ _ _ _ _ _ _ _,
+		B _ _ _ _ _ _ _ _ _ _ _,
+		_ _ _ _ _ _ _ _ _ _ _ _
 	},
 	{
-		LLL LLL LLL LLL LLL LLL LLL LLL LLL LLL LLL S__,
-		BBB S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ BBB,
-		BBB S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ BBB,
-		BBB S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ BBB,
-		BBB TTT TTT TTT TTT TTT BBB TTT TTT TTT TTT S__,
-		BBB S__ S__ S__ S__ S__ S__ TTT LLL S__ S__ S__,
-		BBB S__ S__ S__ S__ S__ S__ S__ S__ TTT LLL S__,
-		TTT S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ TTT
+		L L L L L L L L L L L _,
+		B _ _ _ _ _ _ _ _ _ _ B,
+		B _ _ _ _ _ _ _ _ _ _ B,
+		B _ _ _ _ _ _ _ _ _ _ B,
+		B T T T T T B T T T T _,
+		B _ _ _ _ _ _ T L _ _ _,
+		B _ _ _ _ _ _ _ _ T L _,
+		T _ _ _ _ _ _ _ _ _ _ T
 	}
 };
 
@@ -99,26 +99,26 @@ const int letter_width = strlen(letters[0][0]);
 
 const char *vertical_space[BLOCK_ROW_COUNT] =
 {
-	" ",
-	" ",
-	" ",
-	" ",
-	" ",
-	" ",
-	" ",
-	" "
+	_,
+	_,
+	_,
+	_,
+	_,
+	_,
+	_,
+	_
 };
 
 const char *digits[BLOCK_ROW_COUNT] =
 {
-	LLL BBB S__ S__ S__ LLL TTT TTT TTT TTT TTT LLL S__ S__ S__ LLL TTT TTT TTT TTT TTT LLL,
-	S__ BBB S__ S__ S__ S__ S__ S__ S__ S__ S__ BBB S__ S__ S__ BBB S__ S__ S__ S__ S__ S__,
-	S__ BBB S__ S__ S__ S__ S__ S__ S__ S__ S__ BBB S__ S__ S__ BBB S__ S__ S__ S__ S__ S__,
-	S__ BBB S__ S__ S__ S__ TTT TTT TTT TTT TTT LLL S__ S__ S__ LLL TTT TTT TTT TTT TTT LLL,
-	S__ BBB S__ S__ S__ S__ S__ S__ S__ S__ S__ BBB S__ S__ S__ BBB S__ S__ S__ S__ S__ BBB,
-	S__ BBB S__ S__ S__ S__ S__ S__ S__ S__ S__ BBB S__ S__ S__ BBB S__ S__ S__ S__ S__ BBB,
-	S__ BBB S__ S__ S__ TTT LLL LLL LLL LLL LLL TTT S__ S__ S__ TTT LLL LLL LLL LLL LLL TTT,
-	S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__ S__
+	L B _ _ _ L T T T T T L _ _ _ L T T T T T L,
+	_ B _ _ _ _ _ _ _ _ _ B _ _ _ B _ _ _ _ _ _,
+	_ B _ _ _ _ _ _ _ _ _ B _ _ _ B _ _ _ _ _ _,
+	_ B _ _ _ _ T T T T T L _ _ _ L T T T T T L,
+	_ B _ _ _ _ _ _ _ _ _ B _ _ _ B _ _ _ _ _ B,
+	_ B _ _ _ _ _ _ _ _ _ B _ _ _ B _ _ _ _ _ B,
+	_ B _ _ _ T L L L L L T _ _ _ T L L L L L T,
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 };
 
 const int digits_width = strlen(digits[0]);
@@ -162,7 +162,7 @@ inline void PrintAt(int y, int x, const char *text)
 	cputs(text);
 }
 
-// These are one less than the actual scren dimensions, as the original code
+// These are one less than the actual screen dimensions, as the original code
 // is 0-based - curses just works that way.
 #define SCREEN_BOTTOM_Y (25 - 1)
 #define SCREEN_RIGHT_X  (80 - 1)
@@ -233,8 +233,8 @@ void SwoopInLetters(int screen_middle_x, int left_letter_final_x)
 	}
 
 	// Cut the silk thread to create the letter I
-	PrintAt(1, screen_middle_x, TTT);
-	PrintAt(1 + BLOCK_ROW_COUNT, screen_middle_x, LLL);
+	PrintAt(1, screen_middle_x, T);
+	PrintAt(1 + BLOCK_ROW_COUNT, screen_middle_x, L);
 }
 
 void SwoopInDigits(int screen_middle_x, int spider_x, int left_letter_final_x)
